@@ -1,0 +1,127 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Ensure the body and html take the full height */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; 
+}
+
+/* Main Container Styling */
+.Signup-main {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw; /* Ensure the main container takes full width */
+    background-color: #f0f4f8;
+    z-index: 1;
+}
+
+/* Background Image */
+.Signup-main::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw; /* Ensure background takes full width */
+    height: 100vh; /* Ensure background takes full height */
+    background-image: url('C:\Users\pavit\OneDrive\Desktop\Learning\webd\mim\meet-in-middle-main\frontend\src\assets\map.jpg'); /* Add your image URL here */
+    background-size: cover; /* Ensures image covers the entire screen */
+    background-position: center;
+    opacity: 0.5; /* Control the transparency of the background image */
+    z-index: -1; /* Ensure it stays behind all other content */
+}
+
+/* Signup Container Styling */
+.Signup-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.9); /* Transparent background for the signup box */
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1); 
+    max-width: 500px;
+    width: 100%;
+    z-index: 2; /* Keep it above the background */
+}
+
+/* Logo Styling */
+.Signup-logo img {
+    width: 130px;
+    margin-bottom: 20px;
+}
+
+/* Text Styling */
+.Signup-text {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: lighter;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+    text-shadow: 2px 2px 5px #8d8d8d; 
+    font-size: 20px;
+}
+
+/* Signup Form Styling */
+.Signup-form {
+    width: 100%;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
+}
+
+/* Form Title Styling */
+.Signup-form h2 {
+    color: #0ab5d7;
+    font-size: 32px; 
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 500;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Input Fields Styling */
+.Signup-form input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+    background-color: #f7f7f7;
+    transition: all 0.3s ease;
+}
+
+.Signup-form input:focus {
+    border-color: #0ab5d7;
+    outline: none;
+    background-color: #e0f2f1;
+}
+
+/* Signup Button Styling */
+.Signup-form button {
+    width: 100%;
+    padding: 15px; 
+    background-color: #0ab5d7;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.Signup-form button:hover {
+    background-color: #0a9abc;
+}
