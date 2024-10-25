@@ -121,4 +121,4 @@ To run the project locally, you'll need the following:
 
 
 
-
+![alt text](mim.gif)
