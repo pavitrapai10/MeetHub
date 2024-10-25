@@ -72,7 +72,10 @@ const Signin = () => {
                             onChange={handleInputChange}
                             placeholder="Password"
                         />
-                        <button type="submit">Signup</button>
+                         <p>
+                    Don't have an account? <a href="/signup">Sign Up</a>
+                        </p>
+                        <button type="submit">Sign In </button>
                     </form>
                 </div>
             </div>

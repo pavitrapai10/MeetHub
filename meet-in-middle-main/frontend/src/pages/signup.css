@@ -125,3 +125,19 @@ html, body {
 .Signup-form button:hover {
     background-color: #0a9abc;
 }
+
+.Signup-form p {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #666;
+}
+
+.Signup-form p a {
+    color: #007bff; /* Change this to the color you want */
+    text-decoration: none;
+}
+
+.Signup-form p a:hover {
+    text-decoration: underline;
+}
