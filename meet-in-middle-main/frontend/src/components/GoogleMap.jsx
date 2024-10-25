@@ -23,7 +23,7 @@ const MapContainer = () => {
   const [selectedPlaces, setSelectedPlaces] = useState([]);; // For storing selected places
   const [selectedPlaceCard, setSelectedPlaceCard] = useState(null);
 
-
+  const googleMapsApiKey = import.meta.env.VITE_GOOGLE_MAPS_API_KEY;
   // Fetch the user's location when the component mounts
   useEffect(() => {
     if (navigator.geolocation) {
@@ -146,19 +146,19 @@ console.log(userLocation,"ssss")
   const mapStyles = { width: "100%", height: "400px" };
 
   return (
-    <LoadScript googleMapsApiKey="AIzaSyC07FUPydZqWCczGNbWP_jhLSujSiNVJiU" libraries={["places"]}>
+    <LoadScript googleMapsApiKey={googleMapsApiKey} libraries={["places"]}>
       <div>
         {error && <p>{error}</p>}
         <div>
-          <Autocomplete onLoad={onLoad} onPlaceChanged={onPlaceChanged}>
-            <input
-              type="text"
-              placeholder="Enter a second location"
-              value={inputValue}
-              onChange={(e) => setInputValue(e.target.value)}
-              style={{ width: "100%", padding: "10px" }}
-            />
-          </Autocomplete>
+        <Autocomplete onLoad={onLoad} onPlaceChanged={onPlaceChanged}>
+  <input
+    type="text"
+    placeholder="Enter a second location"
+    value={inputValue}
+    onChange={(e) => setInputValue(e.target.value)}
+    className="input-notion"
+  />
+</Autocomplete>
           <button onClick={calculateMidpoint} style={{ marginTop: "10px", padding: "10px" }}>
             Submit
           </button>

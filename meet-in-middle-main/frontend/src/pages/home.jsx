@@ -6,14 +6,13 @@ import MapContainer from "../components/GoogleMap";
 
 const Home = () => {
     return (
-        <div className="home">
-            <h1>Welcome to MeetHub</h1>
-            <p>OneStop Solution for meeting halfway
-            </p>
-            <div className="MapContainer">
-            <MapContainer/>
-            </div>
-        </div>
+<div className="home">
+  <h1>Welcome to MeetHub</h1>
+  <p>OneStop Solution for meeting halfway</p>
+  <div className="map-container">
+    <MapContainer />
+  </div>
+</div>
         );
 }
 

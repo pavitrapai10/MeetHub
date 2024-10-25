@@ -37,10 +37,10 @@ const InvitePage = () => {
         });
 };
     return (
-        <div>
+        <div className="outer-container">
             <div className="Invite-page-main">
                 <h1>Invite Guests</h1>
-
+                <div className="content-wrapper">
                 <div className="form-section">
                     <div className="form-group">
                         <label>Add Title:</label>
@@ -100,37 +100,30 @@ const InvitePage = () => {
 
                     <button onClick={handleInvite} className="invite-button">Invite</button>
                 </div>
-
-                {selectedPlaces.length > 0 && (
-                    <div className="places-list">
-                        <h2>Select a Location</h2>
-                        {selectedPlaces.map((place, index) => (
-                            <div
-                                key={index}
-                                className="place-card"
-                                onClick={() => setSelectedPlace(place.name)}
-                                style={{
-                                    cursor: "pointer",
-                                    border: "1px solid #ccc",
-                                    marginBottom: "10px",
-                                    padding: "10px",
-                                    borderRadius: "5px"
-                                }}
-                            >
-                                <h5>{place.name}</h5>
-                                <p>{place.vicinity}</p>
-                                <p>Rating: {place.rating || "N/A"}</p>
-                                {place.photos && place.photos.length > 0 && (
-                                    <img
-                                        src={place.photos[0].getUrl()}
-                                        alt={place.name}
-                                        style={{ width: "100px", height: "100px" }}
-                                    />
-                                )}
-                            </div>
-                        ))}
-                    </div>
+{selectedPlaces.length > 0 && (
+    <div className="places-list">
+        <h2>Select a Location</h2>
+        {selectedPlaces.map((place, index) => (
+            <div
+                key={index}
+                className={`place-card ${selectedPlace === place.name ? "selected" : ""}`}
+                onClick={() => setSelectedPlace(place.name)}
+            >
+                <h5>{place.name}</h5>
+                <p>{place.vicinity}</p>
+                <p>Rating: {place.rating || "N/A"}</p>
+                {place.photos && place.photos.length > 0 && (
+                    <img
+                        src={place.photos[0].getUrl()}
+                        alt={place.name}
+                        style={{ width: "100px", height: "100px" }}
+                    />
                 )}
+            </div>
+        ))}
+    </div>
+)}
+            </div>
             </div>
         </div>
     );
