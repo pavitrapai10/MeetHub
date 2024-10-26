@@ -1,4 +1,7 @@
 ## Overview
+
+![alt text](mim.gif)
+
 **MeetHub**  is a location-based app designed to help users organize meetings and find locations convenient for all attendees. The app dynamically suggests midpoint locations such as restaurants and cafes based on the real-time locations of participants.
 
 The project is developed using React for the frontend, Node.js/Express for the backend, and MongoDB for the database. The application integrates Google Maps API for displaying a map component with markers and Google Places API to suggest meeting locations. Additionally, OTP-based user authentication is implemented using Twilio.
@@ -121,4 +124,4 @@ To run the project locally, you'll need the following:
 
 
 
-![alt text](mim.gif)
+
