@@ -64,8 +64,8 @@ To run the project locally, you'll need the following:
 1. Clone the repository:
 
    ```
-   git clone https://github.com/pavitrapai10/meet_in_middle.git
-   cd meet_in_middle
+   git clone https://github.com/pavitrapai10/MeetHub.git
+   cd meet-in-middle-main
    ```
 
 2. Install backend dependencies:
